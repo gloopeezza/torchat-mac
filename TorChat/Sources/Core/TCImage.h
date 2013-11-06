@@ -22,7 +22,7 @@
 
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 
 /*
 ** TCImage
@@ -33,7 +33,7 @@
 
 // -- Instance --
 - (id)initWithWidth:(NSUInteger)width andHeight:(NSUInteger)height;
-- (id)initWithImage:(NSImage *)image;
+- (id)initWithImage:(UIImage *)image;
 
 // -- Content --
 - (BOOL)setBitmap:(NSData *)bitmap;
@@ -49,6 +49,6 @@
 - (NSUInteger)height;
 
 // -- Representation --
-- (NSImage *)imageRepresentation;
+- (UIImage *)imageRepresentation;
 
 @end

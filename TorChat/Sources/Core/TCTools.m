@@ -99,6 +99,7 @@ NSString * hashMD5(NSData *data)
 // == Encode to base 64 a chunk of data ==
 NSString * encodeBase64(NSData *data)
 {
+    /*
 	if ([data length] == 0)
 		return nil;
 	
@@ -122,11 +123,15 @@ NSString * encodeBase64(NSData *data)
 	
 	// Create string.
 	return [[NSString alloc] initWithData:output encoding:NSASCIIStringEncoding];
+     */
+    
+    return [data base64EncodedStringWithOptions:0];
 }
 
 // == Decode from base 64 a chunk of data ==
 NSData * decodeBase64(NSString *base64)
 {
+    /*
 	if ([base64 length] == 0)
 		return nil;
 	
@@ -147,4 +152,6 @@ NSData * decodeBase64(NSString *base64)
 	CFRelease(transform);
 	
     return output;
+     */
+    return [[NSData alloc] initWithBase64EncodedString:base64 options:0];
 }

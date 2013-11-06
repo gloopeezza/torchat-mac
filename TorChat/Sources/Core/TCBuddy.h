@@ -169,14 +169,14 @@ typedef enum
 
 // -- Send Command --
 - (void)sendStatus:(tcstatus)status;
-- (void)sendAvatar:(NSImage *)avatar;
+- (void)sendAvatar:(UIImage *)avatar;
 - (void)sendProfileName:(NSString *)name;
 - (void)sendProfileText:(NSString *)text;
 - (void)sendMessage:(NSString *)message;
 - (void)sendFile:(NSString *)filepath;
 
 // -- Action --
-- (void)startHandshake:(NSString *)remoteRandom status:(tcstatus)status avatar:(NSImage *)avatar name:(NSString *)name text:(NSString *)text;
+- (void)startHandshake:(NSString *)remoteRandom status:(tcstatus)status avatar:(UIImage *)avatar name:(NSString *)name text:(NSString *)text;
 - (void)setInputConnection:(TCSocket *)sock;
 
 // -- Content --
@@ -184,7 +184,7 @@ typedef enum
 - (NSString *)peerVersion;
 
 - (NSString *)profileText;
-- (NSImage *)profileAvatar;
+- (UIImage *)profileAvatar;
 - (NSString *)profileName;		// Current profile name
 
 - (NSString *)lastProfileName;	// Last know profile name

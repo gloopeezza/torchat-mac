@@ -83,7 +83,7 @@
 	return self;
 }
 
-- (id)initWithImage:(NSImage *)image
+- (id)initWithImage:(UIImage *)image
 {
 	if (!image)
 		return nil;
@@ -92,7 +92,7 @@
 	
 	if (self)
 	{
-		// FIXME: build the TCImage size from [NSImage size] instead of static 64x64 ?
+		// FIXME: build the TCImage size from [UIImage size] instead of static 64x64 ?
 		
 		/*
 		 TorChat use separated bitmap for picture and mask. The picture is not pre-multiplied with alpha.
@@ -103,6 +103,7 @@
 		 -> Grrrr !
 		 */
 		
+        /*
 		size_t				bitmapSz = 64 * 64 * 3;
 		unsigned char		*bitmap;
 		
@@ -203,6 +204,7 @@
 
 		// Clean
 		free(full);
+         */
 	}
 	
 	return self;
@@ -348,9 +350,10 @@
 */
 #pragma mark - TCImage - Representation
 
-- (NSImage *)imageRepresentation
+- (UIImage *)imageRepresentation
 {
-	NSImage *image = [[NSImage alloc] initWithSize:NSMakeSize(_width, _height)];
+    /*
+	UIImage *image = [[UIImage alloc] initWithSize:NSMakeSize(_width, _height)];
 	
 	if (!image)
 		return nil;
@@ -378,6 +381,8 @@
 	}
 
 	return image;
+     */
+    return nil;
 }
 
 @end

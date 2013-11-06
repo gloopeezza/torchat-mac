@@ -170,7 +170,7 @@ static char gLocalQueueContext;
 	// > Profile
 	NSString					*_profileName;
 	NSString					*_profileText;
-	NSImage						*_profileAvatar;
+	UIImage						*_profileAvatar;
 	TCImage						*_tcProfileAvatar;
 
 	// > Peer
@@ -788,7 +788,7 @@ static char gLocalQueueContext;
 	});
 }
 
-- (void)sendAvatar:(NSImage *)avatar
+- (void)sendAvatar:(UIImage *)avatar
 {
 	TCImage *tcAvatar = [[TCImage alloc] initWithImage:avatar];
 	
@@ -900,7 +900,7 @@ static char gLocalQueueContext;
 */
 #pragma mark - Action
 
-- (void)startHandshake:(NSString *)remoteRandom status:(tcstatus)status avatar:(NSImage *)avatar name:(NSString *)name text:(NSString *)text
+- (void)startHandshake:(NSString *)remoteRandom status:(tcstatus)status avatar:(UIImage *)avatar name:(NSString *)name text:(NSString *)text
 {
 	if (!remoteRandom || !name || !text)
 		return;
@@ -1004,9 +1004,9 @@ static char gLocalQueueContext;
 	return result;
 }
 
-- (NSImage *)profileAvatar
+- (UIImage *)profileAvatar
 {
-	__block NSImage * result = NULL;
+	__block UIImage * result = NULL;
 	
 	dispatch_sync(_localQueue, ^{
 	
@@ -1850,11 +1850,11 @@ static char gLocalQueueContext;
 	// Add end line.
 	[part appendBytes:"\n" length:1];
 	
-	static int _i = 0;
+	//static int _i = 0;
 	
-	_i++;
+	//_i++;
 	
-	[part writeToFile:[NSString stringWithFormat:@"/Users/jp/Desktop/out/file_%i", _i] atomically:YES];
+	//[part writeToFile:[NSString stringWithFormat:@"/Users/jp/Desktop/out/file_%i", _i] atomically:YES];
 	
 	// -- Buffer or send the command --
 	if (_socksstate != socks_finish)

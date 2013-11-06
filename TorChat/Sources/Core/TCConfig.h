@@ -22,7 +22,7 @@
 
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 
 /*
 ** Defines
@@ -106,8 +106,8 @@ typedef enum
 - (NSString *)profileText;
 - (void)setProfileText:(NSString *)text;
 
-- (NSImage *)profileAvatar;
-- (void)setProfileAvatar:(NSImage *)picture;
+- (UIImage *)profileAvatar;
+- (void)setProfileAvatar:(UIImage *)picture;
 
 // -- Buddies --
 - (NSArray *)buddies; // Array of dictionary.
@@ -118,13 +118,13 @@ typedef enum
 - (void)setBuddy:(NSString *)address notes:(NSString *)notes;
 - (void)setBuddy:(NSString *)address lastProfileName:(NSString *)lastName;
 - (void)setBuddy:(NSString *)address lastProfileText:(NSString *)lastText;
-- (void)setBuddy:(NSString *)address lastProfileAvatar:(NSImage *)lastAvatar;
+- (void)setBuddy:(NSString *)address lastProfileAvatar:(UIImage *)lastAvatar;
 
 - (NSString *)getBuddyAlias:(NSString *)address;
 - (NSString *)getBuddyNotes:(NSString *)address;
 - (NSString *)getBuddyLastProfileName:(NSString *)address;
 - (NSString *)getBuddyLastProfileText:(NSString *)address;
-- (NSImage *)getBuddyLastProfileAvatar:(NSString *)address;
+- (UIImage *)getBuddyLastProfileAvatar:(NSString *)address;
 
 // -- Blocked --
 - (NSArray *)blockedBuddies;

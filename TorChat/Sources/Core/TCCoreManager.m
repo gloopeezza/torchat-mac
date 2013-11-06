@@ -75,7 +75,7 @@
 	dispatch_queue_t		_delegateQueue;
 	
 	// > Profile
-	NSImage					*_profileAvatar;
+	UIImage					*_profileAvatar;
 	NSString				*_profileName;
 	NSString				*_profileText;
 }
@@ -415,7 +415,7 @@
 */
 #pragma mark - TCCoreManager - Profile
 
-- (void)setProfileAvatar:(NSImage *)avatar
+- (void)setProfileAvatar:(UIImage *)avatar
 {
 	if (!avatar)
 		return;
@@ -437,9 +437,9 @@
 	});
 }
 
-- (NSImage *)profileAvatar
+- (UIImage *)profileAvatar
 {
-	__block NSImage *result = NULL;
+	__block UIImage *result = NULL;
 	
 	dispatch_sync(_localQueue, ^{
 		result = _profileAvatar;
