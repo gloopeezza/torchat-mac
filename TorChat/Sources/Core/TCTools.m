@@ -97,8 +97,8 @@ NSString * hashMD5(NSData *data)
 #pragma mark - Encode
 
 // == Encode to base 64 a chunk of data ==
-NSString * encodeBase64(NSData *data)
-{
+//NSString * encodeBase64(NSData *data)
+//{
     /*
 	if ([data length] == 0)
 		return nil;
@@ -125,12 +125,12 @@ NSString * encodeBase64(NSData *data)
 	return [[NSString alloc] initWithData:output encoding:NSASCIIStringEncoding];
      */
     
-    return [data base64EncodedStringWithOptions:0];
-}
+//    return [data base64EncodedStringWithOptions:0];
+//}
 
 // == Decode from base 64 a chunk of data ==
-NSData * decodeBase64(NSString *base64)
-{
+//NSData * decodeBase64(NSString *base64)
+//{
     /*
 	if ([base64 length] == 0)
 		return nil;
@@ -153,5 +153,5 @@ NSData * decodeBase64(NSString *base64)
 	
     return output;
      */
-    return [[NSData alloc] initWithBase64EncodedString:base64 options:0];
-}
+//    return [[NSData alloc] initWithBase64EncodedString:base64 options:0];
+//}

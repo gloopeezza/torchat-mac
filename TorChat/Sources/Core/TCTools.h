@@ -31,5 +31,5 @@ BOOL doAsyncSocket(int sock);
 NSString *	hashMD5(NSData *data);
 
 // == Encode ==
-NSString *	encodeBase64(NSData *data);
-NSData *	decodeBase64(NSString *base64);
+//NSString *	encodeBase64(NSData *data);
+//NSData *	decodeBase64(NSString *base64);
