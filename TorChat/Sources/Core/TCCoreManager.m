@@ -787,7 +787,7 @@
 		}
 	}
 	else
-		[self _error:tccore_error_client_cmd_pong info:@"core_cnx_err_pong" fatal:YES];
+		[self _error:tccore_error_client_cmd_pong info:@"core_cnx_err_pong" fatal:NO];
 	
 	// We don't need the connection at this time: simply remove it.
 	[self removeConnection:connection];
