@@ -303,7 +303,7 @@
 		_timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, _localQueue);
 		
 		// Each 120s
-		dispatch_source_set_timer(_timer, DISPATCH_TIME_NOW, 5000000000L, 0);
+		dispatch_source_set_timer(_timer, DISPATCH_TIME_NOW, 120000000000L, 0);
 		dispatch_source_set_event_handler(_timer, ^{
 			
 			// Do nothing if not running
