@@ -732,8 +732,8 @@
 
 	if ([abuddy isPonged])
 	{
-		[self _error:tccore_error_client_cmd_ping info:@"core_cnx_err_already_pinged" fatal:YES];
-		return;
+		[self _error:tccore_error_client_cmd_ping info:@"core_cnx_err_already_pinged" fatal:NO];
+		//return;
 	}
 	
 	// if someone is pinging us with our own address and the
